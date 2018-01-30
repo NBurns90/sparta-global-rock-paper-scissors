@@ -9,6 +9,8 @@ function compareChoice (choice1, choice2) {
   // Tied
   if (choice1 === choice2) {
     alert('You both tied!')
+    roundPlayerWin++;
+    roundComputerWin++;
   }
 
   // Rock Beats Scissors
@@ -67,6 +69,7 @@ while (roundPlayerWin < 3 && roundComputerWin < 3){
   //Call Function to Compare Choices
   compareChoice(playerChoice, computerChoice);
 
+  alert('The current score is: Player - ' + roundPlayerWin + ':' + roundComputerWin + ' - Computer');
 }
 
 // When round score gets to 3
